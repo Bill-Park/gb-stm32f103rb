@@ -1,0 +1,400 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>시리얼 통신 - 수신값으로 GPIO 제어 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2017-11-03-nucleo_f103rb_serial-3.html" />
+    
+    
+    <link rel="prev" href="2017-11-01-nucleo_f103rb_serial-1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    NUCLEO F103RB 시작하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="2017-09-28-nucleo_f103rb_start.html">
+            
+                <a href="2017-09-28-nucleo_f103rb_start.html">
+            
+                    
+                    LED 켜고 끄기 - LED Blink
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2017-10-25-nucleo_f103rb_digital_input.html">
+            
+                <a href="2017-10-25-nucleo_f103rb_digital_input.html">
+            
+                    
+                    버튼 입력받기 - Button Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="2017-11-01-nucleo_f103rb_serial-1.html">
+            
+                <a href="2017-11-01-nucleo_f103rb_serial-1.html">
+            
+                    
+                    시리얼 통신 - 송수신
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="2017-11-02-nucleo_f103rb_serial-2.html">
+            
+                <a href="2017-11-02-nucleo_f103rb_serial-2.html">
+            
+                    
+                    시리얼 통신 - 수신값으로 GPIO 제어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="2017-11-03-nucleo_f103rb_serial-3.html">
+            
+                <a href="2017-11-03-nucleo_f103rb_serial-3.html">
+            
+                    
+                    시리얼 통신 - printf 함수 사용
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="2017-11-14-nucleo_f103rb_adc-1.html">
+            
+                <a href="2017-11-14-nucleo_f103rb_adc-1.html">
+            
+                    
+                    ADC 사용하기 - 아날로그 값 읽기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="2017-11-25-nucleo_f103rb_adc-2.html">
+            
+                <a href="2017-11-25-nucleo_f103rb_adc-2.html">
+            
+                    
+                    ADC 사용하기 - DMA 사용하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="2017-12-04-nucleo_f103rb_timer_interrupt.html">
+            
+                <a href="2017-12-04-nucleo_f103rb_timer_interrupt.html">
+            
+                    
+                    타이머 인터럽트 - Timer Interrupt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="2017-12-08-nucleo_f103rb_external_interrupt.html">
+            
+                <a href="2017-12-08-nucleo_f103rb_external_interrupt.html">
+            
+                    
+                    외부 인터럽트 - External Interrupt
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >시리얼 통신 - 수신값으로 GPIO 제어</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xC2DC;&#xB9AC;&#xC5BC;-&#xD1B5;&#xC2E0;---&#xC218;&#xC2E0;&#xAC12;&#xC73C;&#xB85C;-gpio-&#xC81C;&#xC5B4;">&#xC2DC;&#xB9AC;&#xC5BC; &#xD1B5;&#xC2E0; - &#xC218;&#xC2E0;&#xAC12;&#xC73C;&#xB85C; GPIO &#xC81C;&#xC5B4;</h1>
+<p>&#xC2DC;&#xB9AC;&#xC5BC; &#xD1B5;&#xC2E0;&#xC740; GPIO&#xC640; &#xBC00;&#xC811;&#xD55C; &#xAD00;&#xACC4;&#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC678;&#xBD80;&#xC5D0;&#xC11C; &#xAC12;&#xC744; &#xC785;&#xB825;&#xD558;&#xAC70;&#xB098;, &#xBCF4;&#xB4DC;&#xC758; &#xC0C1;&#xD0DC;&#xB97C; &#xBCFC; &#xB54C; &#xC2DC;&#xB9AC;&#xC5BC; &#xD1B5;&#xC2E0;&#xC744; &#xC8FC;&#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774;&#xBC88; &#xC2DC;&#xAC04;&#xC5D0;&#xB294; &#xC2DC;&#xB9AC;&#xC5BC; &#xD1B5;&#xC2E0;&#xC73C;&#xB85C; LED &#xC81C;&#xC5B4;&#xC640; &#xBC84;&#xD2BC;&#xC758; &#xC785;&#xB825; &#xC0C1;&#xD0DC;&#xB97C; &#xBC1B;&#xC544;&#xBCF4;&#xB3C4;&#xB85D; &#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<h3 id="stm32cube">STM32Cube</h3>
+<p>&#xC774;&#xC804; &#xC2DC;&#xAC04;&#xC758; &#xD30C;&#xC77C;&#xC5D0;&#xC11C; File - Save Project As &#xD639;&#xC740; Ctrl + A (&#xB2E4;&#xB978;&#xC774;&#xB984;&#xC73C;&#xB85C; &#xC800;&#xC7A5;)&#xB97C; &#xB20C;&#xB7EC;&#xC90D;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../img/nucleo/serial_2/0.png" alt=""></p>
+<p>PC13&#xC5D0; GPIO_Input&#xC744;, PA5&#xC5D0; GPIO_Output&#xC744; &#xC124;&#xC815;&#xD574; &#xC90D;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../img/nucleo/serial_2/1.png" alt=""></p>
+<p>Configuration&#xC758; GPIO&#xC5D0;&#xC11C; PA5&#xC758; &#xB77C;&#xBCA8;&#xC5D0;&#xB294; internal_led&#xB97C;</p>
+<p>PC13&#xC758; &#xB77C;&#xBCA8;&#xC5D0;&#xB294; b1&#xC744; &#xC801;&#xC5B4;&#xC90D;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../img/nucleo/serial_2/2.png" alt=""></p>
+<p>&#xC774;&#xC81C; &#xCF54;&#xB4DC;&#xB97C; &#xC0DD;&#xC131;(&#xD1B1;&#xB2C8;&#xBC14;&#xD034;)&#xD574; &#xC90D;&#xB2C8;&#xB2E4;.</p>
+<h3 id="uvision5">uVision5</h3>
+<p>HAL_UART_Transmit &#xD568;&#xC218;&#xC640; HAL_UART_Receive &#xD568;&#xC218;</p>
+<p>&#xADF8;&#xB9AC;&#xACE0; &#xC774;&#xC804; &#xC2DC;&#xAC04;&#xC5D0; &#xC0AC;&#xC6A9;&#xD588;&#xB358; HAL_GPIO_ReadPin&#xACFC; HAL_GPIO_WritePin&#xC744; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>USER CODE BIGIN 2 &#xBC11;&#xC5D0; &#xC544;&#xB798; &#xBCC0;&#xC218;&#xB4E4;&#xACFC; &#xD568;&#xC218;&#xB97C; &#xCD94;&#xAC00;&#xD574; &#xC90D;&#xB2C8;&#xB2E4;.</p>
+<p>b_in&#xACFC; pin_state&#xB9CC; &#xCD94;&#xAC00;&#xD574; &#xC8FC;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code>  /* USER CODE BEGIN 2 */
+
+    HAL_StatusTypeDef RcvStat ;
+    uint8_t bufftx[10] = &quot;Hello!\n&quot; ;
+    uint8_t b_in[10] = &quot;b_in\n&quot; ;
+    uint8_t UsartData[10] ;
+    uint8_t pin_state ;
+
+    HAL_UART_Transmit(&amp;huart2, bufftx, 10, 100) ;
+</code></pre><p>USER CODE BIGIN 3 &#xC5D0;&#xB294; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xCD94;&#xAC00;&#xD574; &#xC90D;&#xB2C8;&#xB2E4;.</p>
+<pre><code>  /* USER CODE BEGIN 3 */
+
+    RcvStat = HAL_UART_Receive(&amp;huart2, UsartData, 1, 100) ;
+
+    if (RcvStat == HAL_OK) {
+        if (UsartData[0] == &apos;a&apos;) {  // if serial input is &apos;a&apos;, led on
+            HAL_GPIO_WritePin(internal_led_GPIO_Port, internal_led_Pin, GPIO_PIN_SET) ;
+        } else if (UsartData[0] == &apos;b&apos;) {  // if serial input is &apos;a&apos;, led off
+            HAL_GPIO_WritePin(internal_led_GPIO_Port, internal_led_Pin, GPIO_PIN_RESET) ;
+        }
+
+        HAL_UART_Transmit(&amp;huart2, UsartData, 1, 100) ;
+    }
+
+    pin_state = HAL_GPIO_ReadPin(b1_GPIO_Port, b1_Pin) ;
+
+    if (!pin_state) {  // if b1 is low, send b_in
+        HAL_UART_Transmit(&amp;huart2, b_in, 10, 100) ;
+    }
+</code></pre><p>&#xC800;&#xBC88; &#xC2DC;&#xAC04;&#xACFC; &#xAC19;&#xC774; Serial &#xD1B5;&#xC2E0; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC124;&#xC815;&#xD574; &#xC90D;&#xB2C8;&#xB2E4;.</p>
+<p>RESET &#xBC84;&#xD2BC;&#xC744; &#xB20C;&#xB7EC; &#xBCF4;&#xB4DC;&#xB97C; &#xC7AC;&#xC2DC;&#xC791;&#xD558;&#xBA74; Hello! &#xBB38;&#xC790;&#xAC00; &#xB098;&#xC635;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../img/nucleo/serial_2/3.png" alt=""></p>
+<p>B1 &#xBC84;&#xD2BC;&#xC744; &#xB204;&#xB974;&#xBA74; b_in&#xC774; &#xB098;&#xC635;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../img/nucleo/serial_2/4.png" alt=""></p>
+<p>&#xBB38;&#xC790;&#xC5F4; &apos;a&apos;&#xB97C; &#xBCF4;&#xB0B4;&#xBA74; led&#xAC00; &#xCF1C;&#xC9C0;&#xACE0; &apos;b&apos;&#xB97C; &#xBCF4;&#xB0B4;&#xBA74; &#xAEBC;&#xC9C0;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../img/nucleo/serial_2/5.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2017-11-01-nucleo_f103rb_serial-1.html" class="navigation navigation-prev " aria-label="Previous page: 시리얼 통신 - 송수신">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2017-11-03-nucleo_f103rb_serial-3.html" class="navigation navigation-next " aria-label="Next page: 시리얼 통신 - printf 함수 사용">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"post","title":"시리얼 통신 - 수신값으로 GPIO 제어","categories":["avr_arm","stm32"],"level":"1.5","depth":1,"next":{"title":"시리얼 통신 - printf 함수 사용","level":"1.6","depth":1,"path":"posts/2017-11-03-nucleo_f103rb_serial-3.markdown","ref":"posts/2017-11-03-nucleo_f103rb_serial-3.markdown","articles":[]},"previous":{"title":"시리얼 통신 - 송수신","level":"1.4","depth":1,"path":"posts/2017-11-01-nucleo_f103rb_serial-1.markdown","ref":"posts/2017-11-01-nucleo_f103rb_serial-1.markdown","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://blog.psangwoo.com/gb-stm32f103rb"},"plugins":["ga","-sharing"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-96043263-1"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/2017-11-02-nucleo_f103rb_serial-2.markdown","mtime":"2018-01-30T12:52:16.005Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-30T15:36:19.328Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

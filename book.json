@@ -1,0 +1,11 @@
+{
+    "plugins": ["ga", "-sharing"],
+    "pluginsConfig": {
+        "ga": {
+            "token": "UA-96043263-1"
+        }
+    },
+    "variables": {
+        "BASE_URL": "https://blog.psangwoo.com/gb-stm32f103rb"
+    }
+}

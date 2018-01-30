@@ -1,0 +1,389 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>버튼 입력받기 - Button Input · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2017-11-01-nucleo_f103rb_serial-1.html" />
+    
+    
+    <link rel="prev" href="2017-09-28-nucleo_f103rb_start.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    NUCLEO F103RB 시작하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="2017-09-28-nucleo_f103rb_start.html">
+            
+                <a href="2017-09-28-nucleo_f103rb_start.html">
+            
+                    
+                    LED 켜고 끄기 - LED Blink
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="2017-10-25-nucleo_f103rb_digital_input.html">
+            
+                <a href="2017-10-25-nucleo_f103rb_digital_input.html">
+            
+                    
+                    버튼 입력받기 - Button Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="2017-11-01-nucleo_f103rb_serial-1.html">
+            
+                <a href="2017-11-01-nucleo_f103rb_serial-1.html">
+            
+                    
+                    시리얼 통신 - 송수신
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="2017-11-02-nucleo_f103rb_serial-2.html">
+            
+                <a href="2017-11-02-nucleo_f103rb_serial-2.html">
+            
+                    
+                    시리얼 통신 - 수신값으로 GPIO 제어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="2017-11-03-nucleo_f103rb_serial-3.html">
+            
+                <a href="2017-11-03-nucleo_f103rb_serial-3.html">
+            
+                    
+                    시리얼 통신 - printf 함수 사용
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="2017-11-14-nucleo_f103rb_adc-1.html">
+            
+                <a href="2017-11-14-nucleo_f103rb_adc-1.html">
+            
+                    
+                    ADC 사용하기 - 아날로그 값 읽기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="2017-11-25-nucleo_f103rb_adc-2.html">
+            
+                <a href="2017-11-25-nucleo_f103rb_adc-2.html">
+            
+                    
+                    ADC 사용하기 - DMA 사용하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="2017-12-04-nucleo_f103rb_timer_interrupt.html">
+            
+                <a href="2017-12-04-nucleo_f103rb_timer_interrupt.html">
+            
+                    
+                    타이머 인터럽트 - Timer Interrupt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="2017-12-08-nucleo_f103rb_external_interrupt.html">
+            
+                <a href="2017-12-08-nucleo_f103rb_external_interrupt.html">
+            
+                    
+                    외부 인터럽트 - External Interrupt
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >버튼 입력받기 - Button Input</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xBC84;&#xD2BC;-&#xC785;&#xB825;&#xBC1B;&#xAE30;---button-input">&#xBC84;&#xD2BC; &#xC785;&#xB825;&#xBC1B;&#xAE30; - Button Input</h1>
+<p>Digital INPUT&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xB0B4;&#xC7A5; &#xBC84;&#xD2BC;&#xC744; &#xC785;&#xB825;&#xBC1B;&#xC544; &#xBCF4;&#xB3C4;&#xB85D; &#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<h3 id="stm32cube">STM32Cube</h3>
+<p>&#xC774;&#xC804; &#xC2DC;&#xAC04;&#xC758; &#xD30C;&#xC77C;&#xC5D0;&#xC11C; File - Save Project As &#xD639;&#xC740; Ctrl + A (&#xB2E4;&#xB978;&#xC774;&#xB984;&#xC73C;&#xB85C; &#xC800;&#xC7A5;)&#xB97C; &#xB20C;&#xB7EC;&#xC90D;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../img/nucleo/button_input/1.png" alt=""></p>
+<p>Project Name&#xC744; &#xC801;&#xACE0; Ok&#xB97C; &#xB20C;&#xB7EC; &#xC0C8;&#xB85C;&#xC6B4; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xB97C; &#xB9CC;&#xB4ED;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../img/nucleo/button_input/2.png" alt=""></p>
+<p><strong>PC13</strong>&#xBC88;&#xC744; GPIO_Input&#xC73C;&#xB85C; &#xC124;&#xC815;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>PC13&#xC740; B1 &#xBC84;&#xD2BC;(&#xD30C;&#xB780;&#xC0C9; &#xBC84;&#xD2BC;)&#xACFC; &#xC5F0;&#xACB0;&#xB418;&#xC5B4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../img/nucleo/button_input/3.png" alt=""></p>
+<p>&#xD540;&#xC744; &#xC124;&#xC815;&#xD558;&#xAE30; &#xC704;&#xD574; Configuration&#xC73C;&#xB85C; &#xC774;&#xB3D9;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../img/nucleo/button_input/5.png" alt=""></p>
+<p>GPIO&#xB97C; &#xB20C;&#xB7EC; &#xD540; &#xC124;&#xC815;&#xCC3D;&#xC744; &#xB744;&#xC6B4; &#xB4A4; PC13~~ &#xBD80;&#xBD84;&#xC5D0; User Label&#xC744; &#xC801;&#xC5B4;&#xC90D;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD68C;&#xB85C;&#xC5D0; &#xC790;&#xCCB4;&#xC801;&#xC73C;&#xB85C; Pull-up&#xC774; &#xB418;&#xC5B4;&#xC788;&#xC73C;&#xBBC0;&#xB85C; pull-up, pull-down&#xC740; &#xC9C0;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../img/nucleo/button_input/6.png" alt=""></p>
+<p>&#xB2E4;&#xC2DC; Pinout&#xC73C;&#xB85C; &#xB3CC;&#xC544;&#xC640;&#xC11C; &#xCF54;&#xB4DC;&#xB97C; &#xC0DD;&#xC131;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xCF54;&#xB4DC; &#xC0DD;&#xC131;&#xC740; Project-Generate Code&#xB97C; &#xD074;&#xB9AD;&#xD558;&#xAC70;&#xB098;</p>
+<p>Ctrl + Shift + G &#xB97C; &#xC785;&#xB825;&#xD558;&#xAC70;&#xB098;</p>
+<p>&#xC67C;&#xCABD; &#xC704;&#xC758; &#xD1B1;&#xB2C8;&#xBC14;&#xD034; &#xBAA8;&#xC591;&#xC744; &#xB20C;&#xB7EC;&#xB3C4; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../img/nucleo/button_input/7.png" alt=""></p>
+<p>Open Project&#xB97C; &#xB20C;&#xB7EC; uVision5&#xB97C; &#xC2E4;&#xD589;&#xC2DC;&#xCF1C; &#xC90D;&#xB2C8;&#xB2E4;.</p>
+<h3 id="uvision5">uVision5</h3>
+<p>Application/User&#xC758; main.c&#xC5D0;&#xC11C; &#xCF54;&#xB529;&#xC744; &#xD574;&#xC90D;&#xB2C8;&#xB2E4;.</p>
+<p>92&#xBC88;&#xC9F8;&#xC904;&#xC5D0; &#xC788;&#xB294; USER CODE BEGIN 2&#xC5D0; pin_state&#xB97C; &#xC120;&#xC5B8;&#xD574; &#xC90D;&#xB2C8;&#xB2E4;.</p>
+<pre><code>/* USER CODE BEGIN 2 */
+
+uint8_t pin_state ;
+
+/* USER CODE END 2 */
+</code></pre><p>14&#xBC88;&#xC9F8;&#xC904;&#xC758; USER CODE BEGIN 3 &#xC544;&#xB798;&#xC5D0;&#xB3C4; &#xCF54;&#xB4DC;&#xB97C; &#xB123;&#xC5B4;&#xC90D;&#xB2C8;&#xB2E4;.</p>
+<pre><code>/* USER CODE BEGIN 3 */
+
+    pin_state = HAL_GPIO_ReadPin(b1_GPIO_Port, b1_Pin) ;
+    if (pin_state) {
+        HAL_GPIO_WritePin(internal_led_GPIO_Port, internal_led_Pin, GPIO_PIN_SET) ;
+    } else {
+        HAL_GPIO_WritePin(internal_led_GPIO_Port, internal_led_Pin, GPIO_PIN_RESET) ;
+    }
+
+}
+/* USER CODE END 3 */
+</code></pre><p>F7(Build) - F8(Download) &#xB85C; &#xBCF4;&#xB4DC;&#xC5D0; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC62C;&#xB824;&#xC90D;&#xB2C8;&#xB2E4;.</p>
+<p>&#xAC80;&#xC740;&#xC0C9; &#xBC84;&#xD2BC;(RESET)&#xC744; &#xB20C;&#xB7EC; &#xBCF4;&#xB4DC; &#xCD08;&#xAE30;&#xD654; &#xD6C4; &#xD30C;&#xB780;&#xBC84;&#xD2BC;&#xC744; &#xB20C;&#xB7EC;&#xBD05;&#xB2C8;&#xB2E4;.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FrUhnxjZpLQ" frameborder="0" gesture="media" allowfullscreen></iframe>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2017-09-28-nucleo_f103rb_start.html" class="navigation navigation-prev " aria-label="Previous page: LED 켜고 끄기 - LED Blink">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2017-11-01-nucleo_f103rb_serial-1.html" class="navigation navigation-next " aria-label="Next page: 시리얼 통신 - 송수신">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"post","title":"버튼 입력받기 - Button Input","categories":["avr_arm","stm32"],"level":"1.3","depth":1,"next":{"title":"시리얼 통신 - 송수신","level":"1.4","depth":1,"path":"posts/2017-11-01-nucleo_f103rb_serial-1.markdown","ref":"posts/2017-11-01-nucleo_f103rb_serial-1.markdown","articles":[]},"previous":{"title":"LED 켜고 끄기 - LED Blink","level":"1.2","depth":1,"path":"posts/2017-09-28-nucleo_f103rb_start.markdown","ref":"posts/2017-09-28-nucleo_f103rb_start.markdown","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://blog.psangwoo.com/gb-stm32f103rb"},"plugins":["ga","-sharing"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-96043263-1"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/2017-10-25-nucleo_f103rb_digital_input.markdown","mtime":"2018-01-30T12:51:13.624Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-30T15:36:19.328Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

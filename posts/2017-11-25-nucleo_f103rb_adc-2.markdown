@@ -1,0 +1,83 @@
+---
+layout: post
+title:  "nucleo f103rb 사용하기 - ADC - 2"
+categories: [avr_arm, stm32]
+---
+
+# ADC 사용하기 - DMA 사용하기
+
+DMA(Direct Memory access) 기능을 이용하여 ADC값을 받아와 보도록 하겠습니다.
+
+DMA는 CPU를 거치지 않고 메모리에서 바로 값을 가져오는 기능으로 7채널의 DMA 컨트롤러를 내장하고 있습니다.
+
+CPU를 거치지 않기때문에 이론상 훨신 빠른 속도로 값을 가져올 수 있습니다.
+
+### 회로도
+
+지난 시간과 같습니다.
+
+![]({{ site.url }}/img/nucleo/adc/circuit.png)
+
+### STM32Cube
+
+이전 시간의 파일에서 File - Save Project As 혹은 Ctrl + A (다른이름으로 저장)를 눌러줍니다.
+
+![]({{ site.url }}/img/nucleo/adc_dma/0.png)
+
+Configuration 탭으로 이동하여 DMA를 클릭합니다.
+
+![]({{ site.url }}/img/nucleo/adc_dma/1.png)
+
+1. Add를 클릭하여 DMA Request를 추가하고
+
+2. ADC1, 그 외 기타 사항을 맞추고
+
+3. Data Width를 Word로 맞춰준 뒤 Ok를 눌러줍니다.
+
+![]({{ site.url }}/img/nucleo/adc_dma/2.png)
+
+
+
+톱니바퀴를 이용하여 코드를 생성해 줍니다.
+
+### uVision5
+
+printf 함수를 위해 코드를 넣어주고
+
+~~~
+/* USER CODE BEGIN 0 */
+
+int fputc(int ch, FILE *f)
+{
+	uint8_t temp[1] = {ch} ;
+	
+	HAL_UART_Transmit(&huart2, temp, 1, 50) ;
+	
+	return(ch) ;
+}
+
+/* USER CODE END 0 */
+~~~
+
+USER CODE BIGIN 2 아래에 ADC 값이 저장될 변수를 만들어 줍니다.
+
+~~~
+/* USER CODE BEGIN 2 */
+	
+	uint32_t ADC_value[1] ;
+~~~
+
+USER CODE BEGIN 3 안에 DMA를 이용하여 ADC 값을 받아오고 출력하는 코드를 넣어줍니다.
+
+~~~
+/* USER CODE BEGIN 3 */
+		
+	HAL_ADC_Start_DMA(&hadc1, ADC_value, 1) ;
+	printf("%d\r\n", ADC_value[0]) ;
+	HAL_Delay(100) ;
+
+~~~
+
+Serial 통신 프로그램을 실행하고 보드를 재시작한 뒤 값을 확인합니다.
+
+![]({{ site.url }}/img/nucleo/adc_dma/3.png)
