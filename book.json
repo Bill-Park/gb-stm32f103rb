@@ -2,7 +2,7 @@
     "plugins": ["ga", "-sharing"],
     "pluginsConfig": {
         "ga": {
-            "token": "UA-96043263-1"
+            "token": "UA-113328760-1"
         }
     },
     "variables": {
