@@ -4,7 +4,7 @@ rd /s /q docs
 call gitbook install
 call gitbook build
 
-xcopy _book\*.* docs\ /e /h /k
+call xcopy _book\*.* docs\ /e /h /k
 
 git clean -fx node_modules
 git clean -fx _book
